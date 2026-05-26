@@ -105,4 +105,17 @@ Para ejecutar el proyecto, primero se debe instalar las dependencias y luego rea
 ```bash
 npm install
 npm run dev
+npm install json-server ##Guardado de informacion en pseudo-api
+npm install -D concurrently ##Para poder manejar Vite y json-server al mismo tiempo
+```
+
+```bash
+##Esta es una modificacion para poder usar dos servidores al mismo tiempo
+"scripts": {
+    "vite": "vite",
+    "server": "json-server --watch db.json --port 3000",
+    "dev": "concurrently \"npm run vite\" \"npm run server\"",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview" }
 ```

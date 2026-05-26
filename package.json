@@ -5,11 +5,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "vite": "vite",
+    "server": "json-server --watch db.json --port 3001",
+    "dev": "concurrently \"npm run vite\" \"npm run server\"",
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+
   "keywords": [
     "spa",
     "javascript",
@@ -22,9 +25,11 @@
   ],
   "author": "Devis M",
   "dependencies": {
-    "axios": "^1.9.0"
+    "axios": "^1.9.0",
+    "json-server": "^1.0.0-beta.15"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "vite": "^6.3.5"
   },
   "engines": {
