@@ -16,7 +16,7 @@ const routes = {
     '/contacts': renderContacts,
     '/about': renderAbout,
     '/episode': renderEpisode,
-    'location': renderLocation
+    '/location': renderLocation
 };
 
 /**

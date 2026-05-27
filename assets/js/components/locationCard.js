@@ -9,12 +9,16 @@ export function locationCard(location) {
             <div class="card-body">
                 <h3>${location.name}</h3>
                 <p>
-                    <strong>Date:</strong>
-                    ${location.air_date}
+                    <strong>Type:</strong>
+                    ${location.type}
                 </p>
                 <p>
-                    <strong>Count characters:</strong>
-                    ${location.characters.length}
+                    <strong>Dimension:</strong>
+                    ${location.dimension}
+                </p>
+                <p>
+                    <strong> Residents quantity: </strong>
+                    ${location.residents.length}
                 </p>
             </div>
         </article>
