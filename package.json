@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "vite": "vite",
-    "server": "json-server --watch db.json --port 3001",
-    "dev": "concurrently \"npm run vite\" \"npm run server\"",
+    "dev": "npm run vite",
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -25,11 +24,9 @@
   ],
   "author": "Devis M",
   "dependencies": {
-    "axios": "^1.9.0",
-    "json-server": "^1.0.0-beta.15"
+    "axios": "^1.9.0"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1",
     "vite": "^6.3.5"
   },
   "engines": {

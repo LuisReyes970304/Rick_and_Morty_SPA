@@ -1,8 +1,8 @@
 {
     "adminUsers": [
-        {"useremail": "dilandavidchavez123@gmail.com", "password": "1234", "id": 1},
-        {"useremail": "luisrafaelreyescaro1@gmail.com", "password": "12345", "id": 2},
-        {"useremail": "valentinacapuchina@gmail.com", "password": "123456", "id": 3}
+        {"userEmail": "dilan@gmail.com", "password": "1234", "id": 1},
+        {"userEmail": "luis@gmail.com", "password": "12345", "id": 2},
+        {"userEmail": "valentina@gmail.com", "password": "123456", "id": 3}
     ],
 
     "newCharacters": [
