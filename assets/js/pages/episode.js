@@ -2,7 +2,7 @@ import { loadHTML } from '../utils/helpers.js';
 import { getEpisode } from '../services/api.js';
 import {episodeCard} from '../components/episodeCard.js'
 
-export async function renderEpisode(params) {
+export async function renderEpisode() {
     const content = document.getElementById('content');
         content.innerHTML = await loadHTML(
             './assets/js/views/episode.html'
