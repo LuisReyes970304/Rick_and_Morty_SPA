@@ -2,6 +2,8 @@ import { loadHTML } from '../utils/helpers.js';
 import { getCharacters } from '../services/api.js';
 import { characterCard } from '../components/characterCard.js';
 
+const allCharacter = document.querySelectorAll("card")
+
 /**
  * Renderiza Home
  */
@@ -18,3 +20,22 @@ export async function renderHome() {
         .map(character => characterCard(character))
         .join('');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const metadata = localStorage.getItem("data");
+    
+    if (metadata) {
+        document.body.innerHTML = metadata;
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("deleteBtn")) {
+        let charToDelete = e.target.closest(".card");
+        
+        if (charToDelete) {
+            charToDelete.classList.add("hidden");
+            localStorage.setItem("data", document.body.innerHTML);
+        }
+    }
+});

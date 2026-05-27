@@ -21,6 +21,9 @@ export function characterCard(character) {
                     <strong>Species:</strong>
                     ${character.species}
                 </p>
+                <div class="card-actions">
+                    <button class="deleteBtn">Eliminar</button>
+                </div>
             </div>
         </article>
     `;
