@@ -18,20 +18,22 @@ export async function renderCreate() {
         const name = document.getElementById('name').value;
         const gender = document.getElementById('gender').value;
         const imageInput = document.getElementById('image');
+
         const file = imageInput.files[0];
 
         if (!file) return;
-            const reader = new FileReader();
+            const reader = new FileReader(); //Crea un lector de archivos
             reader.onload = function () {
                 const characters = getCharacters();
                 characters.push({name, gender, image: reader.result, isNew: true});
+
                 saveCharacters(characters);
+
                 sessionStorage.setItem('message', 'Character created successfully');
                 form.reset();
                 renderCharacters();
             };
-
-            reader.readAsDataURL(file);
+            reader.readAsDataURL(file); //Convierte imagen 
         }
     );
 
@@ -39,9 +41,9 @@ export async function renderCreate() {
     function renderCharacters() {
         const characters = getCharacters();
         container.innerHTML = characters.map((character, index) =>
-        characterCard(character,index)).join('');
+        characterCard(character,index)).join(''); // join Convierte array en texto HTML
 // DELETE
-            document.querySelectorAll('.deleteBtn') .forEach(button => {
+            document.querySelectorAll('.deleteBtn').forEach(button => {
                     button.addEventListener('click', function (e) {
                             e.preventDefault();
                             e.stopPropagation();
@@ -67,7 +69,8 @@ export async function renderCreate() {
                             const newName = prompt('Enter new name:', characters[index].name);
                             const newGender = prompt('Enter new gender:', characters[index].gender);
                             if (!newName || !newGender){
-                            }{return;}
+                                return;
+                            }
                             characters[index].name = newName;
                             characters[index].gender = newGender;
                             saveCharacters( characters);
