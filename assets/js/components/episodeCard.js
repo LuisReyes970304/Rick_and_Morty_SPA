@@ -29,21 +29,3 @@ export function episodeCard(episode) {
     `;
 }
 
-
-window.handleEdit = function(id) {
-    const seguro = confirm("¿Seguro que deseas realizar esta acción y EDITAR este episodio?");
-    if (seguro) {
-        console.log(`Abriendo formulario de edición para el episodio ID: ${id}`);
-    }
-}
-
-window.handleDelete = function(id, nombre) {
-    const seguro = confirm(`¿Seguro que deseas realizar esta acción? Vas a ELIMINAR el episodio: "${nombre}".`);
-    if (seguro) {
-        const tarjeta = document.getElementById(`episode-${id}`);
-        if (tarjeta) {
-            const removed = tarjeta.remove();
-            localStorage.setItem("data", removed)
-        }
-    }
-}
