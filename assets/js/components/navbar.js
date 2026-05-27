@@ -13,6 +13,7 @@ export async function loadNavbar() {
             <a href="/about" data-link> Quiénes Somos</a>
             <a href="/episode" data-link>Episode</a>
             <a href="/location" data-link>Location</a>
+            <a href="/create" data-link>Create</a>
         </nav>
     `;
 }

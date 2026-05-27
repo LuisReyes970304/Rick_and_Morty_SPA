@@ -22,8 +22,8 @@ export function episodeCard(episode) {
                 
                 <!-- Botones de acción con atributos data para identificar el ID del episodio -->
                 <div class="card-actions">
-                    <button class="btn-edit" onclick="handleEdit(${episode.id})">Editar</button>
-                    <button class="btn-delete" onclick="handleDelete(${episode.id}, '${episode.name}')">Eliminar</button>
+                <button type="button" class="editBtn" data-index="${episode.id}"> Edit </button>
+                <button type="button" class="deleteBtn" data-index="${episode.id}"> Delete </button>
                 </div>
             </div>
         </article>

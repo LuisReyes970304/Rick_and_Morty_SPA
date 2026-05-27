@@ -1,28 +1,14 @@
-/**
- * Character Card Component
- */
-
-export function characterCard(character) {
-
+export function characterCard(character, index) {
     return `
         <article class="card">
-            <img
-                src="${character.image}"
-                alt="${character.name}"
-            >
-
+            ${character.isNew ? ` <span class="badge"> NEW </span> ` : ''}
+            <img class="card-image" src="${character.image}" alt="${character.name}">
             <div class="card-body">
-                <h3>${character.name}</h3>
-                <p>
-                    <strong>Status:</strong>
-                    ${character.status}
-                </p>
-                <p>
-                    <strong>Species:</strong>
-                    ${character.species}
-                </p>
+                <h3> ${character.name}</h3>
+                <p> <strong>Gender:</strong> ${character.gender}</p>
                 <div class="card-actions">
-                    <button class="deleteBtn">Eliminar</button>
+                <button type="button" class="editBtn" data-index="${index}"> Edit </button>
+                <button type="button" class="deleteBtn" data-index="${index}"> Delete </button>
                 </div>
             </div>
         </article>
