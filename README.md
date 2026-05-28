@@ -55,38 +55,15 @@ La aplicación implementa:
 # Estructura del proyecto
 
 ```txt
-spa-rick-morty/
-│
-├── index.html
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   │
-│   └── js/
-│       ├── app.js
-│       ├── router.js
-│       │
-│       ├── services/
-│       │   └── api.js
-│       │
-│       ├── utils/
-│       │   └── helpers.js
-│       │
-│       ├── components/
-│       │   ├── navbar.js
-│       │   └── characterCard.js
-│       │
-│       ├── pages/
-│       │   ├── home.js
-│       │   ├── contacts.js
-│       │   └── about.js
-│       │
-│       └── views/
-│           ├── home.html
-│           ├── contacts.html
-│           └── about.html
-│
-└── README.md
+├───assets
+│   ├───css
+│   └───js
+│       ├───components
+│       ├───pages
+│       ├───services
+│       ├───utils
+│       └───views
+└───node_modules
 ```
 
 # Ejecución del proyecto
@@ -105,16 +82,13 @@ Para ejecutar el proyecto, primero se debe instalar las dependencias y luego rea
 ```bash
 npm install
 npm run dev
-npm install json-server ##Guardado de informacion en pseudo-api
-npm install -D concurrently ##Para poder manejar Vite y json-server al mismo tiempo
+
 ```
 
 ```bash
-##Esta es una modificacion para poder usar dos servidores al mismo tiempo
-"scripts": {
+ "scripts": {
     "vite": "vite",
-    "server": "json-server --watch db.json --port 3000",
-    "dev": "concurrently \"npm run vite\" \"npm run server\"",
+    "dev": "npm run vite",
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview" }

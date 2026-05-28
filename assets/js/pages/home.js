@@ -18,7 +18,8 @@ async function updateHomeView(container) {
     if (!container) return;
 
     const apiResponse = await getApiCharacters();
-    const apiCharacters = Array.isArray(apiResponse) ? apiResponse : (apiResponse?.results || []);
+    const apiCharacters = Array.isArray(apiResponse) ? apiResponse : (apiResponse?.results || []); 
+    // Ensure we have an array of characters from the API response
     
     const localCharacters = getLocalCharacters() || [];
     const deletedApiIds = JSON.parse(localStorage.getItem('deleted_api_characters')) || [];
