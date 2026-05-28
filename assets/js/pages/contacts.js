@@ -5,9 +5,7 @@ import { loadHTML } from '../utils/helpers.js';
  */
 export async function renderContacts() {
     const content = document.getElementById('content');
-    content.innerHTML = await loadHTML(
-        './assets/js/views/contacts.html'
-    );
+    content.innerHTML = await loadHTML('./assets/js/views/contacts.html');
     initializeFormEvents();
 }
 

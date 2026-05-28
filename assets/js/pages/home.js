@@ -11,6 +11,8 @@ export async function renderHome() {
     
     await updateHomeView(container);
 }
+// This function is responsible for updating the home view with the latest characters,
+// including handling deletions and edits for both API and local characters.
 
 async function updateHomeView(container) {
     if (!container) return;
@@ -25,7 +27,7 @@ async function updateHomeView(container) {
     JSON.parse(localStorage.getItem('edited_api_characters')) || {};
 
     const activeApiCharacters = apiCharacters
-    .filter(char => !deletedApiIds.includes(char.id))
+    .filter(char => !deletedApiIds.includes(char.id))   
     .map(char => {
 
         if (editedApiCharacters[char.id]) {
@@ -37,6 +39,7 @@ async function updateHomeView(container) {
 
         return char;
     });
+    
     const allCharacters = [...localCharacters, ...activeApiCharacters];
 
     if (allCharacters.length === 0) {
@@ -86,10 +89,7 @@ async function updateHomeView(container) {
             characterToEdit.name
         );
 
-        const newGender = prompt(
-            'Enter new gender:',
-            characterToEdit.gender
-        );
+        const newGender = prompt('Enter new gender:', characterToEdit.gender);
 
         if (!newName || !newGender) return;
 
@@ -114,18 +114,14 @@ async function updateHomeView(container) {
 
             const editedApiCharacters =
                 JSON.parse(
-                    localStorage.getItem('edited_api_characters')
-                ) || {};
+                    localStorage.getItem('edited_api_characters')) || {};
 
             editedApiCharacters[characterToEdit.id] = {
                 name: newName,
                 gender: newGender
             };
 
-            localStorage.setItem(
-                'edited_api_characters',
-                JSON.stringify(editedApiCharacters)
-            );
+            localStorage.setItem('edited_api_characters', JSON.stringify(editedApiCharacters));
         }
 
         await updateHomeView(container);

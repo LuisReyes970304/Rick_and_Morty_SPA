@@ -4,12 +4,8 @@ import {locationCard} from '../components/locationCard.js'
 
 export async function renderLocation() {
     const content = document.getElementById('content');
-        content.innerHTML = await loadHTML(
-            './assets/js/views/location.html'
-        );
-        const container = document.getElementById(
-            'location-container'
-        );
+        content.innerHTML = await loadHTML( './assets/js/views/location.html');
+        const container = document.getElementById('location-container');
         const location = await getLocation();
         container.innerHTML = location
             .map(location => locationCard(location))

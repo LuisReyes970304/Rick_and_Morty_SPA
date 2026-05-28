@@ -18,21 +18,22 @@ export async function renderCreate() {
         const name = document.getElementById('name').value;
         const gender = document.getElementById('gender').value;
         const imageInput = document.getElementById('image');
-        const file = imageInput.files[0];
+        const file = imageInput.files[0]; // Access the first file from the input element
 
         if (!file) return;
-        
-        const reader = new FileReader();
+// It allows reading files from the user's computer and converting them into a format that can be used in JavaScript, such as a data URL.
+        const reader = new FileReader(); 
+
         reader.onload = function () {
             const characters = getCharacters() || [];
             characters.push({ name, gender, image: reader.result, isNew: true });
             saveCharacters(characters);
 
             sessionStorage.setItem('message', 'Character created successfully');
-            form.reset();
+            form.reset(); // Clear the form after submission
             
             renderLocalCharacters(container);
         };
-        reader.readAsDataURL(file);
-    });
+            reader.readAsDataURL(file); // converts the file into a data URL, which can be used to display the image in the browser without needing to upload it to a server first.
+        });
 }
