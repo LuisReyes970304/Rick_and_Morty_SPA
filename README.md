@@ -1,5 +1,10 @@
 # SPA Vanilla JavaScript - Rick and Morty
 
+## TEAM:
+- valentina Cabas
+- Luis Reyes
+- Dilan Chavez
+
 ## Descripción
 
 Este proyecto es un ejemplo de cómo construir una SPA (Single Page Application) utilizando únicamente JavaScript Vanilla, sin frameworks ni librerías externas.
