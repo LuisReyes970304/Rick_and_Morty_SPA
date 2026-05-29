@@ -93,3 +93,27 @@ npm run dev
     "build": "vite build",
     "preview": "vite preview" }
 ```
+
+---
+
+# Preguntas de análisis
+1. ¿Cómo manejarán el estado de personajes creados localmente?
+Se manejará con un arreglo sincronizado con localStorage para mantener persistencia y renderizar los cambios dinámicamente.
+
+ 
+2. ¿Cómo sincronizarán API, DOM, localStorage y renderizado SPA?
+Mediante un flujo centralizado donde los datos obtenidos desde la API y localStorage actualizan el estado y luego el DOM dinámicamente.
+
+3. ¿Cómo evitarán duplicación de lógica?
+Utilizando funciones reutilizables, componentes dinámicos, helpers y servicios separados.
+Esto permite que el código sea más limpio, escalable y fácil de mantener.
+ 
+4. ¿Qué componentes pueden reutilizarse?
+* Cards de personajes
+* Navbar
+* Loader
+* Modal
+* Botones dinámicos
+* Renderizador de listas
+
+<img width="1170" height="852" alt="IMG_1825" src="https://github.com/user-attachments/assets/6bb38bec-42c9-443d-8eef-4c0d7b91b5fa" />
