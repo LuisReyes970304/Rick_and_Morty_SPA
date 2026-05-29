@@ -120,14 +120,14 @@ npm run dev
 1. ¿Cómo manejarán el estado de personajes creados localmente?
 Se manejará con un arreglo sincronizado con localStorage para mantener persistencia y renderizar los cambios dinámicamente.
 
- 
+
 2. ¿Cómo sincronizarán API, DOM, localStorage y renderizado SPA?
 Mediante un flujo centralizado donde los datos obtenidos desde la API y localStorage actualizan el estado y luego el DOM dinámicamente.
 
 3. ¿Cómo evitarán duplicación de lógica?
 Utilizando funciones reutilizables, componentes dinámicos, helpers y servicios separados.
 Esto permite que el código sea más limpio, escalable y fácil de mantener.
- 
+
 4. ¿Qué componentes pueden reutilizarse?
 * Cards de personajes
 * Navbar
