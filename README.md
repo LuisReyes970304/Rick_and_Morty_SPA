@@ -75,15 +75,43 @@ La aplicación implementa:
 # Estructura del proyecto
 
 ```txt
-├───assets
-│   ├───css
-│   └───js
-│       ├───components
-│       ├───pages
-│       ├───services
-│       ├───utils
-│       └───views
-└───node_modules
+.
+├── assets
+│   ├── css
+│   │   └── styles.css
+│   └── js
+│       ├── app.js
+│       ├── components
+│       │   ├── characterCard.js
+│       │   ├── episodeCard.js
+│       │   ├── locationCard.js
+│       │   └── navbar.js
+│       ├── pages
+│       │   ├── about.js
+│       │   ├── contacts.js
+│       │   ├── create.js
+│       │   ├── episode.js
+│       │   ├── home.js
+│       │   └── location.js
+│       ├── router.js
+│       ├── services
+│       │   ├── api.js
+│       │   ├── httpClient.js
+│       │   └── localStorage.js
+│       ├── utils
+│       │   ├── helpers.js
+│       │   └── renderList.js
+│       └── views
+│           ├── about.html
+│           ├── contacts.html
+│           ├── create.html
+│           ├── episode.html
+│           ├── home.html
+│           └── location.html
+├── index.html
+├── package.json
+├── package-lock.json
+└── README.md
 ```
 
 # Ejecución del proyecto
@@ -103,15 +131,6 @@ Para ejecutar el proyecto, primero se debe instalar las dependencias y luego rea
 npm install
 npm run dev
 
-```
-
-```bash
- "scripts": {
-    "vite": "vite",
-    "dev": "npm run vite",
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview" }
 ```
 
 ---
