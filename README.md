@@ -158,4 +158,6 @@ Esto permite que el código sea más limpio, escalable y fácil de mantener.
 ---
 
 ## Diagarama de flujo 
+
 <img width="1170" height="852" alt="IMG_1825" src="https://github.com/user-attachments/assets/6bb38bec-42c9-443d-8eef-4c0d7b91b5fa" />
+
