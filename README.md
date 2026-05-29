@@ -25,6 +25,22 @@ La aplicación implementa:
 - Obtiene personajes dinámicamente
 - Renderiza cards reutilizables
 
+## Gestión de personajes
+
+- Crear personajes
+- Editar personajes
+- Eliminar personajes
+
+## Episodios
+
+- Consumo dinámico de episodios desde la API
+- Renderizado SPA de episodios
+
+## Ubicaciones
+
+- Consumo dinámico de locations desde la API
+- Navegación dinámica entre vistas
+
 ## Contactos
 
 - Formulario desacoplado
@@ -33,6 +49,10 @@ La aplicación implementa:
 ## Quiénes Somos
 
 - Página estática modular
+
+## Persistencia de datos
+
+- Uso de localStorage para guardar personajes creados localmente
 
 ## Arquitectura SPA
 
@@ -47,7 +67,7 @@ La aplicación implementa:
 - HTML5
 - CSS3
 - JavaScript ES6+
-- Axios API
+- Axios 
 - ES Modules
 
 ---
